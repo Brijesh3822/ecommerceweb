@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Homepage from "./Components/Homepage";
+// import HeaderSecound from "./Components/HeaderSecound";
+import HeaderDeals from "./Components/HeaderDeals";
+import Items from "./Components/Items";
+import Footer from "./Components/Footer";
+import AllRoutes from "./Routes/AllRoutes";
+import { useState } from "react";
 function App() {
+  const [newData, setNewData] = useState("");
+  const [data, setData] = useState([]);
+  console.log(newData);
+  console.log(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* lkhlikh */}
+      <AllRoutes
+        storData={newData}
+        storNewData={setNewData}
+        data={data}
+        setData={setData}
+      />
+      {/* <HeaderSecound /> */}
+      {/* <HeaderDeals />
+      <Items /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

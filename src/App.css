@@ -1,38 +1,718 @@
-.App {
+.header {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 50% 20%;
+  justify-content: center;
+  align-items: center;
+}
+.menubar {
+  display: none;
+}
+.headerDetalis {
+  display: grid;
+  grid-template-columns: 120px 160px 100px;
+  align-items: center;
+  color: white;
+}
+.headerDetalis div {
+  font-size: large;
+  cursor: pointer;
+  font-weight: bolder;
+  width: 160px;
+}
+.iconheader {
+  margin-right: 10px;
+
+  color: red;
+}
+.headerLink {
+  color: white;
+  text-decoration: none;
+}
+.headerScoundDetalis {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10%;
+  justify-content: center;
+  align-items: center;
+  color: rgb(55, 49, 49);
+  border-top: 4px solid red;
+  height: 50px;
+  border-bottom: 4px solid gray;
+  font-weight: bolder;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.headerScoundDetalis div:hover {
+  font-weight: bolder;
+  cursor: pointer;
+  color: #1e1f29;
+}
+.HeaderDeals {
+  background-image: url("https://themewagon.github.io/electro/img/hotdeal.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  height: 500px;
+}
+.dealsTimeMain {
+  display: grid;
+  grid-template-columns: 2% 2% 2% 2%;
+  gap: 10px;
+  justify-content: center;
+}
+.dealsTime {
+  background-color: red;
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+.dealsdiv {
+  display: grid;
+  justify-content: center;
+  /* align-items: center;
+  height: 500px; */
+}
+.deals {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.dealsTital {
+  color: rgb(74, 74, 74);
+  font-size: larger;
+  line-height: 1.4;
+}
+.dealsTital h1 {
+  text-shadow: 2px 2px gray;
+}
+.dealsTital h3 {
+  text-shadow: 1px 1px gray;
+}
+.dealsDetalis {
+  display: grid;
+  grid-template-columns: 15% 18% 15%;
+  gap: 15%;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+}
+.dealsSubDeatlis {
+  display: grid;
+  grid-template-columns: 65% 10%;
+}
+.DealsIcon {
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-color: #f5eded;
+}
+.icon {
+  margin: 6px;
+}
+.ico2 {
+  margin: 9px;
+  font-size: 20px;
+}
+
+.dealsImage {
+  margin-top: 20px;
+  background: none;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 10px;
+  align-items: center;
+  margin-left: -15px;
+  border-top: 2px solid gray;
+}
+.mainproducts {
+  /* border: 2px solid red; */
+  margin: 10px 200px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.dealsImage img {
+  width: 120px;
+  height: 70px;
+  background: none;
+}
+.productsTital {
+  /* background-color: gray; */
+  padding-top: 10px;
+  text-align: center;
+  /* display: flex;
+  justify-content: center; */
+  border: 2px solid gray;
+}
+.productsTital h1 {
+  margin: 0px 0px;
+}
+
+.products {
+  /* margin: 0px 200px; */
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.allProducts {
+  margin: 40px;
+  width: 300px;
+  background-color: #f5f7f8;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  border-radius: 10px;
+}
+.allProducts img {
+  width: 300px;
+  height: 280px;
+}
+.prodectsDetalis {
+  border-top: 2px solid gray;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.prodectsname {
+  margin: 10px;
+  font-size: large;
+
+  font-weight: bold;
+}
+.prodectspric {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.prodectsTitle {
+  margin: 10px;
+  height: 50px;
+}
+.prodectsReview {
+  display: flex;
+  text-align: center;
+}
+.AddtocartButton {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: medium;
+  cursor: pointer;
+  background-color: #f5f7f8;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  border: none;
+}
+
+.AddtocartButton:hover {
+  background-color: #f0ebe3;
+  transition: all 0.7s;
+}
+.reviewandaddtocart {
+  margin: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reviewIcon {
+  font-size: large;
+  margin-right: 5px;
+}
+.footerstart {
+  border-top: 4px solid red;
+  background-color: black;
+  padding-top: 50px;
+  /* display: grid;
+  grid-template-columns: 20% 20% 20% 20%; */
+}
+.footerPartOne {
+  display: grid;
+  grid-template-columns: 20% 15% 15% 15%;
+  justify-content: center;
+  margin-top: 20px;
+}
+.footerDetalis {
+  background-color: black;
+}
+.footerDetalisOne {
+  width: 300px;
+  /* border: 2px solid red; */
+  padding: 20px 0px;
+}
+.footerDetalisOnther {
+  padding: 20px 0px;
+}
+.Aboutus {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.AboutusDetalis {
+  color: gray;
+  font-size: medium;
+  margin-top: 10px;
+}
+.AboutusSubDetalis {
+  color: gray;
+  font-weight: bolder;
+}
+
+.AboutusSubDetalis span:hover {
+  color: red;
+  cursor: pointer;
+}
+.footerIcon {
+  color: red;
+  margin-right: 10px;
+}
+.AboutusSubDetalisSecound {
+  color: gray;
+  font-weight: bolder;
+  line-height: 1.8;
+}
+.AboutusSubDetalisSecound:hover {
+  color: red;
+  cursor: pointer;
+}
+.AboutusDetalis {
+  margin-top: 10px;
+}
+.AboutusIcons {
+  margin-top: 10px;
+}
+
+.AboutusSubDetalis {
+  line-height: 1.8;
+}
+.footerOnther {
+  padding: 10px 320px;
+  /* border: 2px solid red; */
+  background-color: #1e1f29;
+  display: grid;
+  grid-template-columns: 20% 20% 10%;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.footerSubIcons {
+  color: red;
+  font-size: 25px;
+  display: grid;
+  grid-template-columns: 25px 25px 25px 25px;
+  gap: 10px;
+}
+.copyright {
+  color: gray;
+  width: 700px;
+}
+
+.signup {
+  display: grid;
+  justify-content: center;
+}
+.sing {
+  width: 400px;
+  padding: 50px 0px;
+}
+.sing h1 {
+  color: gray;
+}
+.signupinputs {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.signupinputs input {
+  height: 25px;
+  padding-left: 10px;
+}
+
+.signupinputs button {
+  height: 30px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.signupinputs button:hover {
+  background-color: #b4b4b8;
+  border: 1px solid black;
+}
+.singupdetalis {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.singupdetalis span {
+  color: blue;
+  cursor: pointer;
+}
+.signImages {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 12% 14% 12%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.signImages img {
+  width: 40px;
+  height: 40px;
+}
+.singupdetalisLink {
+  margin-left: 5px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+.signIn {
+  display: flex;
+
+  justify-content: center;
+
+  padding: 50px 0px;
+}
+.signInPageDetalis {
+  width: 400px;
+}
+.signInPageDetalis h1 {
+  color: gray;
+}
+.signInInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.signInInput input {
+  height: 25px;
+  padding-left: 10px;
+}
+.signInInput button {
+  height: 30px;
+  font-size: medium;
+}
+.signInInput button:hover {
+  background-color: #b4b4b8;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.forgotPassword {
+  color: blue;
+  cursor: pointer;
+  font-weight: 500;
+}
+.noSignIn {
+  color: red;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+.AddToDetalis {
+  display: grid;
+  grid-template-columns: 70% 20% 10%;
+  align-items: center;
+  margin: 10px 200px;
+  padding: 0px 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  border-radius: 10px;
+}
+.AddToDetalis button {
+  height: 40px;
+  background-color: #b61515;
+  color: white;
+  font-size: large;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.AddToDetalis button:hover {
+  cursor: pointer;
+  background-color: red;
+}
+.allProduct {
+  margin: 40px 200px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border-radius: 10px;
+}
+.product {
+  margin: 20px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 10px;
+}
+.productImage img {
+  width: 100%;
+  height: 280px;
+}
+.foterProdectDetalis {
+  margin: 20px 10px;
+  display: grid;
+  grid-template-columns: 70% 10% 10% 10%;
+}
+.displayQty {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (max-device-width: 1440px) {
+  .deals {
+    margin-top: 0px;
+    font-size: medium;
+    margin-left: 70px;
+  }
+  .HeaderDeals {
+    height: 400px;
+  }
+  .mainproducts {
+    margin: 10px 100px;
+  }
+  .products {
+    grid-template-columns: 32% 32% 32%;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .footerPartOne {
+    justify-content: space-around;
+  }
+  .footerOnther {
+    padding: 10px 100px;
+  }
+  .AddToDetalis {
+    grid-template-columns: 57% 26% 17%;
+    margin: 10px 20px;
+  }
+  .allProduct {
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    margin: 10px 60px;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* .header {
+    width: 107%;
+  }
+  
+
+  .headerScoundDetalis {
+    width: 107%;
+  }
+  .HeaderDeals {
+    width: 107%;
+  } */
+  .header {
+    grid-template-columns: 50% 20%;
+    justify-content: start;
+    padding-left: 20px;
+  }
+  .HeaderDeals {
+    height: 300px;
+  }
+  .deals {
+    font-size: 12px;
+    margin-left: 50px;
+  }
+  .dealsTital {
+    line-height: 1;
+  }
+  .dealsDetalis {
+    margin-top: 30px;
+  }
+  .dealsImage {
+    gap: 20px;
+    grid-template-columns: 20% 70%;
+  }
+  .products {
+    grid-template-columns: 50% 50%;
+  }
+  .allProduct {
+    grid-template-columns: 40% 40%;
+  }
+  .footerPartOne {
+    grid-template-columns: 25% 15% 15% 15%;
+  }
+  .footerOnther {
+    padding: 10px 10px;
+  }
+  .footerDetalisOne {
+    width: 200px;
+  }
+  .copyright {
+    width: 600px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-device-width: 766px) and (max-device-width: 820px) {
+  .header {
+    justify-content: start;
   }
-  to {
-    transform: rotate(360deg);
+  .headerDetalis {
+    grid-template-columns: 100px 140px 100px;
+  }
+  .HeaderDeals {
+    height: 220px;
+  }
+  .headerScoundDetalis {
+    grid-template-columns: 17% 17% 17% 17% 17%;
+  }
+  .dealsTital {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .dealsDetalis {
+    display: none;
+  }
+  .dealsImage {
+    border: none;
+    margin-top: 0px;
+    gap: 30px;
+  }
+
+  .deals {
+    margin-left: 70px;
+    margin-top: 20px;
+  }
+
+  .mainproducts {
+    margin: 10px 20px;
+  }
+  .footerOnther {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+  .copyright {
+    width: 560px;
+  }
+  .AddToDetalis {
+    grid-template-columns: 50% 28% 22%;
+  }
+  .allProduct {
+    grid-template-columns: 45% 45%;
+    margin: 10px 10px;
+  }
+}
+@media screen and (max-device-width: 766px) {
+  .header {
+    display: grid;
+    grid-template-columns: 10% 50%;
+
+    height: 160px;
+    gap: 10px;
+  }
+  /* .headerDetalis{
+  
+  
+  } */
+
+  .headerDetalis {
+    display: grid;
+  }
+
+  .headerDetalis {
+    margin-left: -40px;
+  }
+  /* .none {
+    display: none;
+  }
+  .flex {
+    display: flex;
+  } */
+  .menubar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .menubar button {
+    color: black;
+    border: none;
+    background-color: black;
+    font-size: larger;
+    width: 20px;
+  }
+  .headerDetalis div {
+    width: 129px;
+  }
+  .HeaderDeals {
+    background-image: none;
+  }
+  .deals {
+    margin-left: 10px;
+  }
+  .headerScoundDetalis {
+    grid-template-columns: 15% 18% 15% 15% 15%;
+    justify-content: start;
+    gap: 12px;
+    padding-left: 5px;
+  }
+
+  .HeaderDeals {
+    height: 330px;
+  }
+  .dealsTital {
+    line-height: 1;
+    margin-left: 20px;
+  }
+  .dealsImage {
+    gap: 40px;
+    grid-template-columns: 20% 70%;
+  }
+  .dealsDetalis {
+    margin-top: 10px;
+  }
+  .productsTital {
+    padding-top: 0px;
+  }
+  .products {
+    grid-template-columns: 80%;
+    margin-left: 0px;
+  }
+  .mainproducts {
+    margin: 10px 10px;
+  }
+  .footerPartOne {
+    grid-template-columns: none;
+  }
+  .footerOnther {
+    grid-template-columns: 60% 40%;
+    padding: 10px 10px;
+  }
+  .copyright {
+    display: none;
+  }
+  .AddToDetalis {
+    grid-template-columns: 100%;
+    padding: 0px 20px 20px 20px;
+  }
+  .allProduct {
+    grid-template-columns: 90%;
+    margin: 10px 10px;
+  }
+}
+@media screen and (max-device-width: 400px) {
+  .headerScoundDetalis {
+    grid-template-columns: 15% 22% 14% 16% 15%;
+    gap: 6px;
+  }
+  .headerDetalis div {
+    width: 129px;
+  }
+  .headerDetalis {
+    margin-left: -70px;
+  }
+  .dealsImage {
+    gap: 20px;
+    margin-left: -30px;
+    grid-template-columns: 20% 74%;
+  }
+  .sing {
+    width: 350px;
+  }
+
+  .signInPageDetalis {
+    width: 350px;
+    
   }
 }
