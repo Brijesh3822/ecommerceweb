@@ -701,6 +701,7 @@
   }
   .headerDetalis {
     margin-left: -70px;
+    grid-template-columns: 107px 140px 40px;
   }
   .dealsImage {
     gap: 20px;
@@ -713,6 +714,5 @@
 
   .signInPageDetalis {
     width: 350px;
-    
   }
 }
